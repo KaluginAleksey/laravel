@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\TestController as TestControllerAlias;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', TestControllerAlias::class);
+Route::get('/test', TestController::class);
 
 
 
