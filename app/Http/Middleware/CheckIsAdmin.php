@@ -23,6 +23,7 @@ class CheckIsAdmin
             return $next($request);
         } else {
             abort(401, 'Unauthorized');
+
         }
     }
 }
