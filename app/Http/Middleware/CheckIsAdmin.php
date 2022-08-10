@@ -19,7 +19,7 @@ class CheckIsAdmin
         if ($request->hasHeader('X-UserName') &&
             $request->header('X-UserName') == 'admin' &&
             $request->hasHeader('X-password') &&
-            $request->header('X-password') == hash('sha1', '123456')) {
+            hash('sha1', $request->header('X-password')) == hash('sha1', '123456')) {
             return $next($request);
         } else {
             abort(401, 'Unauthorized');
